@@ -22,11 +22,12 @@ const exampleParallaxData = [
   
     start: 0,
     end:1000,
-
+    duration:10,
     properties: [
       {
-        startValue: 100,
-        endValue: -600,
+        startValue: 0,
+        endValue: -400,
+
         
         property: "translateY",
       },
@@ -56,21 +57,14 @@ const data = [
 function App() {
   return (
     <div className="App">
-      {/* <Plx className="MyAwesomeParallax" parallaxData={data}> */}
-      {/* <h1 style={{
-        display:'flex',
-        justifyContent:'center'
-        ,
-        alignItems:'center'
-      }}>welcome </h1> */}
-      {/* </Plx> */}
+    
       <Nav/>
       <Main/>
+      <Plx className="MyAwesomeParallax img" parallaxData={exampleParallaxData}>
 
-<Plx className="MyAwesomeParallax img" parallaxData={exampleParallaxData}>
- 
+        <img src='earth-min-removebg-preview.png'  width="500" height="500"/>
       </Plx>
-<div style={{
+      <div style={{
   height:'200vh'
 }}>
 

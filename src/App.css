@@ -7,17 +7,27 @@ body{
     background-color: black;
 }
 .img{
-    background-image: url('../src/earth.png');
-   background-position: center;
-    background-repeat: no-repeat;
-    object-fit:  contain;
-    background-size: contain;
-    position: absolute;
-    top: 50vh;
-    z-index: -1;
-    min-width: 100%;
-     will-change:transform;
-    min-height: 100vh;
-     transform: translateZ(0);
+
+
+    /* background-size: contain; */
+
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     top: 60%;
+     left: 0;
+     right: 0;
+     z-index: -1;
+
     
   } 
+
+    img {
+        will-change:transform;
+        max-width: 100%;
+        height: auto;
+
+      }
+      
