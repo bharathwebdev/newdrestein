@@ -16,18 +16,21 @@ body{
      justify-content: center;
      align-items: center;
      position: absolute;
-     top: 60%;
+     top: 75%;
      left: 0;
      right: 0;
      z-index: -1;
-
+     width: 100vw;
+     height: auto;
     
   } 
 
-    img {
-        will-change:transform;
-        max-width: 100%;
-        height: auto;
+   .img img {
+       
+  max-width: 100%;
+  height: auto;
+  will-change:transform;
 
+  aspect-ratio: 1;
       }
       

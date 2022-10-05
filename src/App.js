@@ -1,8 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Plx from 'react-plx';
 import Nav from './components/Nav';
 import Main from './components/Main';
+import { Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { useParallax } from 'react-scroll-parallax';
+
+import { Image } from './test/test';
 // const parallaxData = [
 //   {
 //     start: 'self',
@@ -55,21 +60,32 @@ const data = [
   }
 ]
 function App() {
+  const {parallax}= useParallax<HTMLDivElement>({speed: 10 });
+
+
+  // updates cached values after image dimensions have loaded
+
   return (
+    <ParallaxProvider>
     <div className="App">
-    
       <Nav/>
       <Main/>
-      <Plx className="MyAwesomeParallax img" parallaxData={exampleParallaxData}>
+      {/* <Plx className="MyAwesomeParallax img" parallaxData={exampleParallaxData}> */}
+<Parallax className='img' translateY={[0, -100]}>
 
-        <img src='earth-min-removebg-preview.png'  width="500" height="500"/>
-      </Plx>
-      <div style={{
-  height:'200vh'
+           <Image  src='earth-min-removebg-preview.png'/>
+</Parallax>
+
+      {/* </Plx> */}
+      <div ref={parallax} style={{
+  height:'200vh',
+  // width:'200px',
+  // background:'red'
 }}>
 
 </div>
     </div>
+</ParallaxProvider>
   );
 }
 
