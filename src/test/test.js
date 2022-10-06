@@ -27,5 +27,5 @@ export function Image(props) {
     // // updates cached values after image dimensions have loaded
     // const handleLoad = () => parallaxController.update();
   
-    return <img src={props.src} onLoad={afterload} width='400px' />;
+    return <img src={props.src} onLoad={afterload}  />;
   }

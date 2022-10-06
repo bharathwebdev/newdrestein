@@ -8,6 +8,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { useParallax } from 'react-scroll-parallax';
 
 import { Image } from './test/test';
+import { useEffect, useRef } from 'react';
 // const parallaxData = [
 //   {
 //     start: 'self',
@@ -62,8 +63,23 @@ const data = [
 function App() {
   const {parallax}= useParallax<HTMLDivElement>({speed: 10 });
 
-
+const yeah = useRef(null)
   // updates cached values after image dimensions have loaded
+
+useEffect(()=>{
+  window.addEventListener('scroll', () => {
+    let value = window.scrollY;
+    yeah.current.style.marginBottom = value * 2 + 'px'; 
+    //  yeah.current
+  })
+  return ()=>{
+    window.removeEventListener('scroll', () => {
+      let value = window.scrollY;
+      yeah.current.style.marginBottom = value * 2 + 'px';
+    
+    })
+  }
+})
 
   return (
     <ParallaxProvider>
@@ -73,8 +89,12 @@ function App() {
       {/* <Plx className="MyAwesomeParallax img" parallaxData={exampleParallaxData}> */}
 <Parallax className='img' translateY={[0, -100]}>
 
-           <Image  src='earth-min-removebg-preview.png'/>
+           <Image  src='earth.png'/>
 </Parallax>
+{/* <h1  ref={yeah} style={{
+  fontSize:'50px',
+  color:'white'
+}}>helo</h1> */}
 
       {/* </Plx> */}
       <div ref={parallax} style={{

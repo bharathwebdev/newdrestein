@@ -199,30 +199,30 @@ function Main() {
    const secLeft = Math.floor((e_minLeft - minsLeft)*60);
 
   
-  setInterval(()=>{
-    const today  = new Date();
-  const eventDay  = new Date("November 10, 2022")
-  const msPerDay = 24 * 60 * 60 * 1000 ;
-  const timeLeft = (eventDay.getTime() - today.getTime());
-  const e_daysLeft = timeLeft / msPerDay;
-  const daysLeft = Math.floor(e_daysLeft);
+  // setInterval(()=>{
+  //   const today  = new Date();
+  // const eventDay  = new Date("November 10, 2022")
+  // const msPerDay = 24 * 60 * 60 * 1000 ;
+  // const timeLeft = (eventDay.getTime() - today.getTime());
+  // const e_daysLeft = timeLeft / msPerDay;
+  // const daysLeft = Math.floor(e_daysLeft);
 
-  const e_hrsLeft = (e_daysLeft - daysLeft)*24;
-  const hrsLeft = Math.floor(e_hrsLeft);
+  // const e_hrsLeft = (e_daysLeft - daysLeft)*24;
+  // const hrsLeft = Math.floor(e_hrsLeft);
 
-  const e_minLeft =(e_hrsLeft - hrsLeft)*60;
-  const minsLeft = Math.floor(e_minLeft);
+  // const e_minLeft =(e_hrsLeft - hrsLeft)*60;
+  // const minsLeft = Math.floor(e_minLeft);
 
-   const secLeft = Math.floor((e_minLeft - minsLeft)*60);
-   setdate({
-    days:daysLeft,
-    hr:hrsLeft,
-    min:minsLeft,
-    sec:secLeft
+  //  const secLeft = Math.floor((e_minLeft - minsLeft)*60);
+  //  setdate({
+  //   days:daysLeft,
+  //   hr:hrsLeft,
+  //   min:minsLeft,
+  //   sec:secLeft
 
-   })
+  //  })
   
-  },1000)
+  // },1000)
   return (
     <MainHeader className="main_header">
       <HeaderBg className="header_bg  ">
