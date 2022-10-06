@@ -94,7 +94,9 @@ useEffect(()=>{
 {/* <h1  ref={yeah} style={{
   fontSize:'50px',
   color:'white'
-}}>helo</h1> */}
+}}>helo</h1> */}  
+
+
 
       {/* </Plx> */}
       <div ref={parallax} style={{
